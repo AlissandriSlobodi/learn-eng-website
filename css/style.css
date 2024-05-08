@@ -1,0 +1,1218 @@
+/*---------- Fonts -----------*/
+
+/*---------- Variables -----------*/
+
+:root {
+  /* colors */
+  --clr-primary-blue: hsl(215, 39%, 20%);
+  --clr-primary-blue-light-1: #354559;
+  --clr-primary-blue-dark-1: hsl(215, 36%, 27%);
+  --clr-primary-blue-dark-2: hsl(220, 38%, 3%);
+  --clr-primary-gold: hsl(36, 39%, 74%);
+  --clr-primary-gold-light-1: hsl(40, 37%, 97%);
+  --clr-primary-gold-light-2: hsl(35, 39%, 85%);
+  --clr-white: #fff;
+  --clr-black: #000;
+  --contact: #7EA47E;
+  --transition: all 0.3s linear;
+  --radius: 14px;
+}
+
+/*---------- Global Styles -----------*/
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lora', serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: capitalize;
+}
+
+/*---------- Global Classes -----------*/
+.section {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 3rem;
+  padding-top: 6rem;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 2rem 0 5rem;
+}
+
+.section-heading h2 {
+  font-size: 2.5rem;
+  color: var(--clr-primary-blue);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.underline {
+  height: 0.125rem;
+  width: 8rem;
+  background-color: var(--clr-primary-gold);
+  margin: 0 auto;
+}
+
+/*---------- Header -----------*/
+.header {
+  position: relative;
+  background: linear-gradient(
+      180deg,
+      rgba(2, 9, 26, 0.35) 15.1%,
+      rgba(20, 32, 64, 0) 96.35%
+    ),
+    url(../assets/background.jpg) center/cover no-repeat;
+}
+
+/*---------- Navbar -----------*/
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 3rem;
+  height: 70px;
+  z-index: 10;
+}
+
+.nav-logo img {
+  width: 60px;
+  margin-top: 5px;
+}
+
+.nav-logo img:hover {
+  filter: invert(100%);
+}
+
+.nav-links {
+  display: flex;
+  gap: 60px;
+}
+
+.nav-link {
+  font-size: 1.125rem;
+  text-transform: capitalize;
+  color: var(--clr-primary-gold-light-1);
+  letter-spacing: 1px;
+}
+
+/*----------- Navbar on click ------------*/
+.active {
+  background-color: var(--clr-primary-blue-dark-1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-active a {
+  color: #141414;
+}
+
+/*---------- Hamburger button -----------*/
+.nav-link {
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--clr-primary-gold);
+}
+
+.hamburger-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  width: 27px;
+  height: 2px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  border-radius: var(--radius);
+  background: var(--clr-white);
+}
+
+.hamburger-btn:hover .bar {
+  background: var(--clr-primary-gold);
+}
+
+/*---------- Title -----------*/
+.title {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title-center {
+  margin-top: 3rem;
+}
+
+.title-heading {
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+
+.title-heading h1 {
+  font-size: 5rem;
+  color: var(--clr-primary-gold-light-1);
+  padding-right: 1rem;
+  text-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.25);
+}
+
+.title-logo {
+  width: 46px;
+  height: 55px;
+}
+
+.title-btn {
+  margin-top: 2rem;
+  margin-right: 2.5rem;
+  padding: 1.25rem 5rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  background: var(--clr-primary-blue);
+  color: var(--clr-primary-gold-light-1);
+  box-shadow: 0px 6px 5.9px 0px rgba(0, 0, 0, 0.25);
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.title-btn:hover {
+  background: var(--clr-primary-gold);;
+  color: var(--clr-primary-blue-dark-1);
+  border: 2px solid var(--clr-primary-blue);
+}
+
+.program-date {
+  color: var(--clr-primary-gold);;
+}
+/*---------- About -----------*/
+
+.section-center {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-info {
+  width: 55%;
+  margin-right: 4rem;
+}
+
+.section-info h3 {
+  margin-bottom: 3rem;
+  color: var(--clr-primary-gold);
+  font-size: 1.5rem;
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.section-info p {
+  line-height: 1.7;
+  color: var(--clr-primary-blue-dark-1);
+}
+
+/*---------- Numbers -----------*/
+.numbers-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 3rem 0 0;
+}
+
+.numbers-card {
+  flex: 0 0 23.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--clr-primary-gold-light-2);
+  background: rgba(243, 243, 243, 0.3);
+  box-shadow: 1px 50px 97.3px 0px rgba(155, 155, 155, 0.25);
+  padding: 2.5rem 1rem;
+  border-radius: 2.2rem;
+}
+
+.numbers-logo {
+  height: 50px;
+  margin-bottom: 1.5rem;
+}
+
+.numbers-title {
+  font-size: 3.75rem;
+  letter-spacing: 3px;
+  color: var(--clr-primary-blue-dark-1);
+}
+
+.numbers-info {
+  font-size: 1.25rem;
+  color: var(--clr-primary-gold);
+  font-weight: 600;
+  text-align: center;
+}
+
+
+/*---------- Ski areas -----------*/
+.programs-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 8rem;
+}
+
+.areas-btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.filter-btn {
+  width: 7rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  margin-right: 1rem;
+  border-radius: var(--radius);
+  border: none;
+  background-color: var(--clr-primary-gold);
+  box-shadow: 0px 6px 5.9px 0px rgba(0, 0, 0, 0.25);
+  text-transform: capitalize;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--clr-primary-blue-dark-1);
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  background-color: var(--clr-primary-gold-light-2);
+  color: var(--clr-primary-blue-dark-2);
+}
+
+.single-program {
+  border: 1px solid var(--clr-primary-gold);
+  border-radius: 1.25rem;
+  box-shadow: 0px 50px 97px 0px rgba(155, 155, 155, 0.39);
+  transition: var(--transition);
+  margin-bottom: 1rem;
+}
+
+.single-program:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 50px 97px 0px rgba(155, 155, 155, 0.5);
+}
+
+.single-program:hover .see-more {
+  background-color: var(--clr-primary-gold);
+  border-bottom-left-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+}
+
+.program-img {
+  border-top-right-radius: 1.25rem;
+  border-top-left-radius: 1.25rem;
+  height: 12rem;
+  object-fit: cover;
+}
+
+.program-info {
+  padding: 1rem 0 0.5rem 0.5rem;
+  border-bottom: 1px solid var(--clr-primary-gold);
+  color: var(--clr-primary-blue-dark-1);
+}
+
+.program-area {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.program-info h4 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  padding-top: 0.7rem;
+  padding-bottom: 2rem;
+}
+
+.see-more {
+  width: 100%;
+  border: none;
+  background: none;
+  padding: 1.25rem 0;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  color: var(--clr-primary-blue-dark-1);
+}
+
+/*---------- Prices -----------*/
+.section-prices {
+  background: var(--clr-primary-blue);
+  padding-bottom: 6rem;
+}
+
+.section-prices .section-heading {
+  margin: 2rem 0 3rem;
+}
+
+.section-prices h2 {
+  color: var(--clr-primary-gold-light-1);
+}
+
+.prices-info {
+  text-align: center;
+  max-width: 40rem;
+  line-height: 1.7;
+  margin: 0 auto;
+  color: var(--clr-primary-gold-light-1);
+  font-size: 1.125rem;
+}
+
+.prices-categories {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50rem;
+  margin: 7rem auto 0;
+  text-align: center;
+}
+
+.prices-category h4 {
+  color: var(--clr-primary-gold);
+  font-size: 1.375rem;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.prices-category p {
+  color: var(--clr-primary-gold-light-1);
+  font-size: 2rem;
+}
+
+/*---------- Questions -----------*/
+.question-container {
+  max-width: 60rem;
+  margin: 0 auto 4rem;
+}
+
+.question {
+  margin-bottom: 2rem;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--clr-primary-gold);
+  padding: 1rem 0.25rem 0.5rem 0.75rem;
+}
+
+.question-title p {
+  color: var(--clr-primary-blue-dark-1);
+  font-size: 1.25rem;
+  padding-right: 1rem;
+}
+
+.question-btn {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  color: var(--clr-primary-gold);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.question-text {
+  padding: 2rem 0.75rem 4rem 0.75rem;
+  background: var(--clr-primary-gold-light-1);
+  line-height: 1.7;
+}
+
+/* hide text */
+.question-text {
+  display: none;
+}
+
+.show-text .question-text {
+  display: block;
+}
+
+.minus-icon {
+  display: none;
+}
+
+.show-text .minus-icon {
+  display: inline;
+}
+
+.show-text .plus-icon {
+  display: none;
+}
+
+/*---------- Contact -----------*/
+.contact-wrapper {
+  background: url(../assets/footer.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.section-contact {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rem;
+  padding-bottom: 2rem;
+  color: var(--clr-primary-blue-dark-1);
+}
+
+.contact-container h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  line-height: 1.5rem;
+}
+
+.contact-logo {
+  display: flex;
+  text-transform: capitalize;
+  margin-bottom: 2rem;
+}
+
+.contact-logo img {
+  width: 18px;
+  height: 22px;
+  margin-left: 0.5rem;
+}
+
+.contact-email {
+  margin-top: 2rem;
+}
+
+.contact-container .contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact-links .nav-link {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--clr-primary-blue-dark-1);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.contact-links .nav-link:hover {
+  color: var(--clr-primary-gold);
+}
+
+/*---------- Footer -----------*/
+.footer {
+  text-align: center;
+  border-top: 1px solid var(--clr-primary-gold);
+  line-height: 1.5;
+  padding: 1rem 0.5rem;
+  font-size: 0.75rem;
+  color: var(--clr-primary-blue);
+}
+
+.footer-rights {
+  text-transform: capitalize;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+}
+
+.footer span {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/*---------- Media Queries ------------*/
+
+@media screen and (max-width: 1024px) {
+  /*---------- Header -----------*/
+  .title-heading h1 {
+    font-size: 4rem;
+  }
+
+  /*---------- About -----------*/
+  .section-info {
+    width: 85%;
+    margin-right: 3rem;
+  }
+
+  .section-info h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  /*---------- Numbers -----------*/
+  .numbers-card {
+    flex: 0 0 24%;
+    padding: 2rem 1rem;
+    border-radius: 25px;
+  }
+
+  .numbers-title {
+    font-size: 2.75rem;
+  }
+
+  .numbers-info {
+    font-size: 1rem;
+  }
+
+  /*---------- Ski areas -----------*/
+
+  .programs-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*---------- Prices -----------*/
+  /* .section-prices {
+    padding: 7rem 0;
+  } */
+
+  .section-prices .section-heading {
+    margin: 2rem 0 2.5rem;
+  }
+
+  .prices-info {
+    font-size: 1rem;
+  }
+
+  .prices-categories {
+    max-width: 45rem;
+  }
+
+  .prices-category p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 776px) {
+  /*---------- Global -----------*/
+  .section-heading {
+    margin: 0 0 3rem;
+  }
+
+  .section-heading h2 {
+    font-size: 2rem;
+  }
+
+  .underline {
+    height: 0.1rem;
+    width: 6rem;
+  }
+
+  /*---------- Navbar -----------*/
+  .navbar {
+    padding: 2rem 1.5rem;
+  }
+
+  .nav-logo img {
+    width: 50px;
+  }
+
+  /*---------- Hambruger btn -----------*/
+  .hamburger-btn {
+    display: block;
+  }
+
+  .bar {
+    display: block;
+  }
+
+  .hamburger-btn.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-btn.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(12.5px) translateX(1px);
+  }
+
+  .hamburger-btn.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px) translateX(-2px);
+  }
+
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: 70px;
+    height: 100vh;
+    flex-direction: column;
+    gap: 0px;
+    width: 100%;
+    background-color: var(--clr-primary-blue-dark-1);
+    transition: 0.3s;
+    padding-top: 2rem;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-item {
+    transition: var(--transition);
+  }
+
+  .nav-item:hover {
+    padding-left: 2rem;
+    background: var(--clr-primary-gold);
+    color: var(--clr-primary-blue);
+  }
+
+  .nav-link {
+    color: var(--clr-white);
+    display: block;
+    padding: 1.5rem 1.5rem;
+  }
+
+  .nav-link:hover {
+    color: var(--clr-primary-blue);
+  }
+
+  /*---------- Title -----------*/
+  .title-center {
+    margin-top: 1rem;
+  }
+  .title-heading h1 {
+    font-size: 3rem;
+  }
+
+  .title-logo {
+    width: 30px;
+    height: 32px;
+  }
+
+  .title-btn {
+    margin-top: 1.2rem;
+    margin-right: 0.5rem;
+    padding: 1rem 3.5rem;
+    border: 1px solid transparent;
+    font-size: 0.85rem;
+  }
+
+  /*---------- About -----------*/
+
+  .section-center {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section-info {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 5rem;
+  }
+
+  .section-info h3 {
+    margin-bottom: 1rem;
+    font-size: 1.125rem;
+  }
+
+  /*---------- Numbers -----------*/
+  .numbers-container {
+    margin: 3rem 0;
+  }
+  .numbers-card {
+    flex: 0 0 47%;
+    margin-bottom: 2rem;
+  }
+
+  .numbers-title {
+    font-size: 2.5rem;
+  }
+
+  /*---------- Slides -----------*/
+  .section-slides {
+    flex-direction: column;
+    height: 80vh;
+    margin: 5rem 0 0;
+  }
+
+  .slide-area {
+    font-size: 1rem;
+  }
+
+  .slide-name {
+    font-size: 1rem;
+  }
+
+  .selected {
+    flex: 4;
+  }
+
+  /*---------- Ski areas -----------*/
+  .areas-btn {
+    max-width: 30rem;
+    flex-wrap: wrap;
+    margin: 0 auto 2rem;
+  }
+
+  .filter-btn {
+    margin-bottom: 1rem;
+  }
+
+  .programs-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 5rem;
+  }
+
+  .program-info h4 {
+    font-size: 1rem;
+    padding-top: 0.2rem;
+  }
+
+  .see-more {
+    font-size: 1rem;
+    padding: 1rem 0;
+  }
+
+  /*---------- Prices -----------*/
+  .section-prices .section-heading {
+    margin: 0 0 1.5rem;
+  }
+
+  .prices-categories {
+    justify-content: space-between;
+    margin-top: 5rem;
+  }
+
+  .prices-category h4 {
+    font-size: 1rem;
+  }
+
+  .prices-category p {
+    font-size: 1.2rem;
+  }
+
+  /*---------- Questions -----------*/
+  .question-title {
+    padding: 0rem 0.25rem 0.2rem 0.5rem;
+  }
+
+  .question-title p {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .question-btn {
+    font-size: 1.5rem;
+  }
+
+  .question-text {
+    font-size: 0.875rem;
+    padding: 2rem 0.75rem 3rem 0.5rem;
+  }
+
+  /*---------- Contact -----------*/
+  .section-contact {
+    padding-top: 7rem;
+  }
+
+  .contact-container h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-info p {
+    font-size: 0.875rem;
+  }
+
+  .contact-container .contact-links {
+    font-size: 0.875rem;
+  }
+
+  /*---------- Contact -----------*/
+  .footer {
+    padding: 0.5rem 0.5rem;
+  }
+
+  .footer-rights {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /*---------- Global -----------*/
+  .section {
+    padding: 6rem 1.5rem 0;
+  }
+
+  .nav-links {
+    padding-top: 0;
+  }
+
+  /*---------- Titel -----------*/
+  .title-center {
+    margin-top: 0rem;
+  }
+
+  .title-heading {
+    padding: 0 1rem;
+  }
+
+  .title-heading h1 {
+    font-size: 2rem;
+  }
+
+  .title-btn {
+    padding: 0.75rem 2.5rem;
+  }
+
+  /*---------- About -----------*/
+  .section-heading h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-info h3 {
+    font-size: 1rem;
+  }
+
+  .section-info p {
+    font-size: 0.875rem;
+  }
+
+  .section-card {
+    width: 80%;
+  }
+
+  /*---------- Numbers -----------*/
+  .numbers-container {
+    margin: 0rem 0;
+  }
+
+  .numbers-card {
+    flex: 0 0 48%;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+
+  .numbers-logo {
+    height: 35px;
+  }
+
+  .numbers-title {
+    font-size: 1.5rem;
+  }
+
+  .numbers-info {
+    font-size: 0.875rem;
+  }
+
+  /*---------- Slides -----------*/
+  .single-slide {
+    height: 30vh;
+  }
+
+  .slide-area {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+  }
+
+  .slide-name {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  /*---------- Ski areas -----------*/
+  .areas-btn {
+    margin: 0 auto 1rem;
+  }
+
+  .filter-btn {
+    margin-bottom: 0.7rem;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+    width: 6rem;
+  }
+
+  .programs-container {
+    margin-bottom: 5rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .program-img {
+    height: 10rem;
+    object-fit: cover;
+  }
+
+  /*---------- Prices -----------*/
+  .prices-info {
+    font-size: 0.875rem;
+  }
+
+  .prices-categories {
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .prices-category {
+    width: 40%;
+  }
+
+  /*---------- Questions -----------*/
+  .question-title p {
+    font-size: 0.875rem;
+    padding-right: 2rem;
+  }
+
+  .question-text {
+    font-size: 0.75rem;
+  }
+
+  .section-contact {
+    padding-top: 3rem;
+  }
+
+  .contact-container h3,
+  .contact-container .contact-links {
+    display: none;
+  }
+
+  .contact-email {
+    margin-bottom: 1rem;
+  }
+}
+
+/*---------- 400px -----------*/
+@media screen and (max-width: 400px) {
+  .prices-category {
+    width: 100%;
+  }
+}
+
+/*---------- 550px height -----------*/
+@media all and (max-height: 550px) and (orientation: landscape) {
+  .nav-links {
+    padding-top: 0;
+  }
+
+  .nav-link {
+    padding: 1rem 1.5rem;
+  }
+
+  .section-slides {
+    display: none;
+  }
+}
+
+/* call us */
+.call-to-us {
+  position: fixed;
+  display: block;
+  opacity: 0.7;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+  background-color: var(--clr-primary-gold);
+  right: 30px;
+  bottom: 30px;
+  z-index: 999;
+}
+
+
+.call-to-us:before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  display: block;
+  border: 2px solid var(--clr-primary-gold);
+  border-radius: 50%;
+  animation: squeeze 2s infinite;
+}
+
+.call-to-us:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://cdn0.iconfinder.com/data/icons/windows8_icons/26/phone1.png') center no-repeat;
+  border-radius: 50%;
+}
+
+@keyframes squeeze {
+  0% {
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    margin-left: -5px;
+  }
+
+  50% {
+    width: 90px;
+    height: 90px;
+    margin-top: -47px;
+    margin-left: -47px;
+  }
+
+  100% {
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    margin-left: -5px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.2);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 40px transparent, 0 0 0 24px rgba(0, 255, 128, 0);
+  }
+
+  100% {
+    transform: scale(0.9);
+    box-shadow: 0 0 0 0 rgba(90, 153, 212, 0.2);
+  }
+}
+
+/**
+ * NOTIFICATION TOAST 
+ */
+
+.toast {
+  position: fixed;
+  bottom: 10px;
+  left: auto;
+  right: 20px;
+  background: var(--clr-primary-gold);
+  color: var(--clr-primary-blue-light-1);
+  width: 280px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 5px 20px hsla(0, 0%, 0%, 0.15);
+  transform: translateX(calc(100% + 20px));
+  transition: 0.5s ease-in-out;
+  border-radius: 50px;
+  z-index: 55;
+  animation: slideInOut 20s ease-in-out infinite;
+}
+
+
+@keyframes slideInOut {
+
+  0%,
+  45% {
+    transform: translateX(calc(100% + 20px));
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50%,
+  95% {
+    transform: translateX(0);
+    opacity: 0.9;
+    /* Установка непрозрачности на 1 */
+    visibility: visible;
+  }
+
+  100% {
+    transform: translateX(calc(100% + 20px));
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.toast.closed {
+  display: none;
+}
+
+.toast-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: var(--sonic-silver);
+}
+
+.toast-close-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+.toast-banner {
+  width: 70px;
+  height: 70px;
+  border: 1px solid var(--cultured);
+  border-radius: var(--border-radius-sm);
+}
+
+.toast-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+/* 
+.toast-detail {
+  width: calc(100% - 85px);
+  padding-right: 10px;
+} */
+
+.toast-message {
+  font-size: 22px;
+  color: var(--sonic-silver);
+  margin-bottom: 8px;
+}
+
+.toast-title {
+  font-size: var(--fs-7);
+  font-weight: var(--weight-500);
+  color: var(--onyx);
+}
+
+.toast-meta {
+  font-size: var(--fs-10);
+  color: var(--sonic-silver);
+}
